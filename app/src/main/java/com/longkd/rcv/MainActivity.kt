@@ -10,7 +10,6 @@ import com.longkd.rcv.model.Item
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var userAdapter: UserAdapter
-    private lateinit var currentList: List<Item>
     private var currentType = Layout.LINEAR
     private lateinit var itemDecoration: RecyclerViewItemDecoration
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,8 +60,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initData() {
-        currentList = initList()
-        userAdapter.submitList(currentList)
+        userAdapter.submitList( initList())
 
     }
 
